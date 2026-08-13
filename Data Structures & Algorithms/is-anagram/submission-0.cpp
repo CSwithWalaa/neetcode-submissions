@@ -2,8 +2,7 @@ class Solution {
 public:
 
     // Approach 1 (optimal): Frequency Array Count
-    // Time Complexity: O(n) where N is the length of the string
-    // Space Complexity: O(1) because the array size is fixed at 26
+    // Time O(n) _ Space O(1) as the array size is fixed at 26
 
     bool isAnagram(string s, string t) {
 
@@ -20,7 +19,7 @@ public:
             count[c - 'a']--;
         }
 
-        for(int i = 0; i < 26; i++) {   // O(1) Constant time since loop always runs exactly 26 times
+        for(int i = 0; i < 26; i++) {   // O(1) - constant time since loop always runs exactly 26 times
             if(count[i] != 0) 
                 return false;
         }
@@ -29,19 +28,17 @@ public:
     }
 };
 
-// Alternative Approach
+// Approach 2 (Alternative): Sorting Method 
 /*
-    // Approach 2: Sorting Method
-    // Time Complexity: O(n log n) due to the sorting step
-    // Space Complexity: O(1) or O(n) depending on the language's sort implementation
+    // Time O(n log n) _ Space O(1) / O(n) depending on the language's sort implementation
     
     bool isAnagram(string s, string t) {
 
         if(s.length() != t.length()) 
             return false;
             
-        sort(s.begin(), s.end());
-        sort(t.begin(), t.end());
+        sort(s.begin(), s.end());            // O(n log n)
+        sort(t.begin(), t.end());            // O(n log n)
 
         return s == t;
     }
