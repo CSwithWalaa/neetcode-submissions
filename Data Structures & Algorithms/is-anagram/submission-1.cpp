@@ -2,8 +2,7 @@ class Solution {
 public:
 
     // Approach 1 (optimal): Frequency Array Count
-    // Time Complexity: O(n) where N is the length of the string
-    // Space Complexity: O(1) because the array size is fixed at 26
+    // Time O(n) _ Space O(1) as the array size is fixed at 26
 
     bool isAnagram(string s, string t) {
 
