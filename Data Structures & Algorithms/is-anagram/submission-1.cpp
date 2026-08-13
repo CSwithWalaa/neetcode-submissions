@@ -29,26 +29,25 @@ public:
     }
 };
 
-// Alternative Approach
+// Approach 2 (Alternative): Sorting Method 
 /*
-    // Approach 2: Sorting Method
-    // Time Complexity: O(n log n) due to the sorting step
-    // Space Complexity: O(1) or O(n) depending on the language's sort implementation
+    // Time O(n log n) _ Space O(1) / O(n) depending on the language's sort implementation
     
     bool isAnagram(string s, string t) {
 
         if(s.length() != t.length()) 
             return false;
             
-        sort(s.begin(), s.end());
-        sort(t.begin(), t.end());
+        sort(s.begin(), s.end());            // O(n log n)
+        sort(t.begin(), t.end());            // O(n log n)
 
         return s == t;
     }
+*/
 
-    // Approach 3: Unicode Support (Scalable for Emojis / International Text)
-    // Time Complexity: O(n) as hash map lookups take O(1) average time
-    // Space Complexity: O(u) where u is the number of unique characters in the string
+// Approach 3: Unicode Support (Scalable for Emojis / International Text)
+/*
+    // Time O(n) _ Space O(u) where u is the number of unique characters in the string
 
     bool isAnagram(string s, string t) {
 
