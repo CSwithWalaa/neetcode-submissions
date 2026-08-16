@@ -1,6 +1,7 @@
 class Solution {
 public:
-    // Time O(n) - Space O(1)
+    // Time O(n) - we scan through the string only one time. pointers go forward/inward. 
+    // Space O(1) - we only have two integer pointers and few variables
     bool isPalindrome(string s) {
         int left = 0;
         int right = s.size() - 1;
